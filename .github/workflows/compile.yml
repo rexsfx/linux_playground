@@ -13,4 +13,4 @@ jobs:
       - name: Setup depencies and Toolchain
         run: |
           OWNER="${{ github.repository_owner }}"
-          curl -LSs "https://githubusercontent.com/{OWNER}/linux_playground/refs/heads/main/kernel.sh" | bash
+          curl -LSs "https://raw.githubusercontent.com/{OWNER}/linux_playground/refs/heads/main/kernel.sh" | bash
