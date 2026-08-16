@@ -6,6 +6,7 @@ defconfig=gale_defconfig
 
 #Toolchain export
 export PATH=$(pwd)/clang/bin:$PATH
+export KBUILD_CFLAGS="-mllvm -enable-ml-inliner=release -mllvm -enable-ml-regalloc=release"
 
 #Kernel clone
 git clone -b $branch_kernel --depth=1 $kernel_source kernel
