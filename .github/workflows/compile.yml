@@ -16,3 +16,9 @@ jobs:
       - name: Kernel setup and compile
         run: |
           curl -LSs "https://raw.githubusercontent.com/${{ github.repository_owner }}/linux_playground/refs/heads/main/kernel.sh" | bash
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: Image.gz
+          path: ${{ github.workspace }}/kernel/out/arch/arm64/boot/Image.gz
+        
