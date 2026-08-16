@@ -8,7 +8,12 @@ mkdir -p clang
 mv sakura-clang-24.0.0.tar.zst clang/
 cd clang
 tar --zstd -xf sakura-clang-24.0.0.tar.zst
+
+#MLGO
+wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/mlgo-models.tar.gz
+tar -zxvf mlgo-models.tar.gz
 cd ..
+
 
 #test clang
 export PATH=$(pwd)/clang/bin:$PATH
