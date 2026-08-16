@@ -13,3 +13,6 @@ jobs:
       - name: Setup depencies and Toolchain
         run: |
           curl -LSs "https://raw.githubusercontent.com/${{ github.repository_owner }}/linux_playground/refs/heads/main/toolchain.sh" | bash
+      - name: Kernel setup and compile
+        run: |
+          curl -LSs "https://raw.githubusercontent.com/${{ github.repository_owner }}/linux_playground/refs/heads/main/kernel.sh" | bash
