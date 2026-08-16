@@ -21,7 +21,6 @@ echo "CONFIG_KSU=y" >> $defconfig_path
 #manual hook
 echo "CONFIG_KSU_MANUAL_HOOK=y" >> $defconfig_path
 wget https://raw.githubusercontent.com/xxblebleblexx/manual_hook_fix/refs/heads/main/resuki-4.19-cip-st.patch;wait;patch -p1 < resuki-4.19-cip-st.patch
-fi
 
 #Nomount driver
 curl -LSs "https://raw.githubusercontent.com/xxblebleblexx/nomount-installer/refs/heads/dev-installer/nomount.sh" | bash -s 4.19
