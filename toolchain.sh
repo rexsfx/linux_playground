@@ -1,3 +1,5 @@
+#!/bin/sh
+
 #setup mandatory packages
 sudo pacman -S --needed git llvm lld base-devel ncurses openssl bc flex bison rsync kmod cpio python ccache tar gzip zstd wget
 
