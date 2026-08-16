@@ -1,0 +1,14 @@
+name: Arch machine compiler
+on:
+  workflow_dispatch:
+
+jobs:
+  arch-job:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux/archlinux:base-devel
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: command
+        run: 
