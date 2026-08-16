@@ -9,3 +9,7 @@ mv sakura-clang-24.0.0.tar.zst clang/
 cd clang
 tar --zstd -xf sakura-clang-24.0.0.tar.zst
 cd ..
+
+#test clang
+export PATH=$(pwd)/clang/bin:$PATH
+clang --version
