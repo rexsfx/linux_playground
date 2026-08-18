@@ -1,8 +1,8 @@
 #configuration
-kernel_source=https://github.com/xxblebleblexx/android_kernel_xiaomi_gale.git
-branch_kernel=mb-qpr2
-defconfig_path=arch/arm64/configs/gale_defconfig
-defconfig=gale_defconfig
+kernel_source=https://github.com/rexsfx/android_kernel_xiaomi_whyred.git
+branch_kernel=master
+defconfig_path=arch/arm64/configs/vendor/whyred-perf_defconfig
+defconfig=whyred-perf_defconfig
 
 #Toolchain export
 export PATH=$(pwd)/clang/bin:$PATH
