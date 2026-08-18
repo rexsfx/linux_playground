@@ -21,6 +21,11 @@ jobs:
         with:
           name: Image.gz
           path: ${{ github.workspace }}kernel/out/arch/arm64/boot/Image.gz
+      - name: Upload build artifact Image.gz-dtb
+        uses: actions/upload-artifact@v7
+        with:
+          name: Image.gz-dtb
+          path: ${{ github.workspace }}/kernel/out/arch/arm64/boot/Image.gz-dtb
       - name: Send Via Telegram
         uses: BorisTestov/tg_sender_action@latest
         env:
@@ -28,9 +33,3 @@ jobs:
           TG_SENDER_TG_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TG_SENDER_PAYLOAD_MESSAGE: Moonbeam Gale Kernel
           TG_SENDER_PAYLOAD_FILE_PATH: ${{ github.workspace }}/kernel/out/arch/arm64/boot/Image.gz
-      - name: Upload build artifact Image.gz-dtb
-        uses: actions/upload-artifact@v7
-        with:
-          name: Image.gz-dtb
-          path: ${{ github.workspace }}/kernel/out/arch/arm64/boot/Image.gz-dtb
-        
