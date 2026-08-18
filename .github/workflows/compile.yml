@@ -20,7 +20,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: Image.gz
-          path: ${{ github.workspace }}/kernel/out/arch/arm64/boot/Image.gz
+          path: ${{ github.workspace }}arch/arm64/boot/Image.gz-dtb
       - name: Send Via Telegram
         uses: BorisTestov/tg_sender_action@latest
         env:
